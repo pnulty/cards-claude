@@ -18,14 +18,36 @@
 
   <div id="card-screen" class="screen">
     <button id="back-btn" aria-label="Choose a different suit">&#8592; Suits</button>
-    <div id="card-tap-area">
-      <img id="card-image" src="" alt="">
-      <div id="card-label">
-        <span id="card-suit-label"></span>
-        <span id="card-name-label"></span>
+
+    <div class="card-flip-area">
+      <div class="card-flip-container" id="card-flip">
+        <div class="card-flip-inner" id="card-inner">
+
+          <div class="card-face card-front">
+            <img id="card-image" src="" alt="">
+            <div class="card-front-label">
+              <span id="card-suit-front"></span>
+              <span id="card-name-front"></span>
+            </div>
+          </div>
+
+          <div class="card-face card-back">
+            <div class="card-back-scroll">
+              <p class="card-back-suit" id="card-suit-back"></p>
+              <h2 class="card-back-name" id="card-name-back"></h2>
+              <blockquote class="card-short-text" id="card-short-text"></blockquote>
+              <div class="card-body-text" id="card-body-text"></div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-    <p id="hint">Tap to draw another</p>
+
+    <div class="card-actions">
+      <p id="flip-hint">Tap card to read</p>
+      <button id="draw-btn">Draw</button>
+    </div>
   </div>
 
   <script src="cards-data.js"></script>
